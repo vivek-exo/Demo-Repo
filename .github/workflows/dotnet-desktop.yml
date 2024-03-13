@@ -17,5 +17,6 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: MSIX Package
-        path: ${{ env.Wap_Project_Directory }}\AppPackages
+        name: Plugin
+        path: "${{ github.workspace }}/bin/plugin_deploy"
+        run: echo ${{ github.workspace }}
